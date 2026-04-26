@@ -1,0 +1,17 @@
+{
+  "Role": "arn:aws:iam::ACCOUNT_ID:role/S3ReplicationRole",
+  "Rules": [
+    {
+      "ID": "ReplicateAll",
+      "Priority": 1,
+      "Status": "Enabled",
+      "Filter": {},
+      "DeleteMarkerReplication": {
+        "Status": "Enabled"
+      },
+      "Destination": {
+        "Bucket": "arn:aws:s3:::DEST_BUCKET"
+      }
+    }
+  ]
+}
