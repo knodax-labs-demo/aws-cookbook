@@ -1,0 +1,22 @@
+{
+  "Comment": "Glue ETL Pipeline",
+  "StartAt": "CleanJob",
+  "States": {
+    "CleanJob": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Parameters": {
+        "JobName": "churn-clean-job"
+      },
+      "Next": "AggregateJob"
+    },
+    "AggregateJob": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun",
+      "Parameters": {
+        "JobName": "churn-aggregate-job"
+      },
+      "End": true
+    }
+  }
+}

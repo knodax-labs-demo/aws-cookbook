@@ -1,0 +1,1 @@
+python3 put_records_to_kinesis.py
