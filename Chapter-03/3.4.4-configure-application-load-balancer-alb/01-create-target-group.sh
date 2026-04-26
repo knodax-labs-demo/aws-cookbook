@@ -1,0 +1,5 @@
+aws elbv2 create-target-group \
+  --name WebAppTG \
+  --protocol HTTP \
+  --port 80 \
+  --vpc-id <vpc-id>
