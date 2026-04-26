@@ -1,0 +1,15 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY producer.py .
+
+ENV AWS_REGION=us-east-1
+ENV DELIVERY_STREAM=edge-events
+ENV BATCH_SIZE=50
+ENV INTERVAL_SEC=0.5
+
+CMD ["python", "producer.py"]
