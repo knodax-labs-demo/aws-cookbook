@@ -1,0 +1,1 @@
+aws rds create-db-cluster   --db-cluster-identifier $DB_CLUSTER_ID   --engine aurora-mysql   --master-username $DB_USER   --master-user-password $DB_PASSWORD   --database-name $DB_NAME   --vpc-security-group-ids $SG_ID   --db-subnet-group-name aurora-subnet-group   --serverless-v2-scaling-configuration MinCapacity=0.5,MaxCapacity=8   --region $REGION

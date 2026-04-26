@@ -1,0 +1,1 @@
+aws iam put-role-policy   --role-name CodeBuildServiceRole   --policy-name CodeBuildInlinePolicy   --policy-document file://codebuild-inline-policy.json

@@ -1,0 +1,12 @@
+{  "AlarmName": "BacklogPerTask-High",
+  "ComparisonOperator": "GreaterThanThreshold",
+  "EvaluationPeriods": 2,
+  "Threshold": 50,
+  "DatapointsToAlarm": 2,
+  "AlarmActions": ["SCALEOUT_ARN_REPLACE"],
+  "Metrics": [
+    {"Id":"m1","MetricStat":{"Metric":{"Namespace":"AWS/SQS","MetricName":"ApproximateNumberOfMessagesVisible","Dimensions":[{"Name":"QueueName","Value":"orders-queue"}]},"Period":60,"Stat":"Average"},"ReturnData":false},
+    {"Id":"m2","MetricStat":{"Metric":{"Namespace":"ECS/ContainerInsights","MetricName":"RunningTaskCount","Dimensions":[{"Name":"ClusterName","Value":"prod-cluster"},{"Name":"ServiceName","Value":"web-api"}]},"Period":60,"Stat":"Average"},"ReturnData":false},
+    {"Id":"expr","Expression":"m1 / MAX([m2,1])","Label":"BacklogPerTask","ReturnData":true}
+  ]
+}

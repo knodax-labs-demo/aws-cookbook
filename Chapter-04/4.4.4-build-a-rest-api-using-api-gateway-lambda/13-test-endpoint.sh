@@ -1,0 +1,1 @@
+curl https://<api-id>.execute-api.<region>.amazonaws.com/prod/hello

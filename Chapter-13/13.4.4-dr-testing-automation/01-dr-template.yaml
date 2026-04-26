@@ -1,0 +1,2 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: DR test plumbing with SSM Automation, Route 53 failover testing, and Lambda health verification

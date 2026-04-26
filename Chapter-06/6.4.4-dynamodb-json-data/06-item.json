@@ -1,0 +1,14 @@
+{
+  "UserID": { "S": "U1001" },
+  "Profile": {
+    "M": {
+      "Name": { "S": "Alice" },
+      "Preferences": {
+        "M": {
+          "Language": { "S": "en" },
+          "Theme": { "S": "dark" }
+        }
+      }
+    }
+  }
+}

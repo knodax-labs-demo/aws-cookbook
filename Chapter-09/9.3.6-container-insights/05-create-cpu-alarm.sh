@@ -1,0 +1,11 @@
+aws cloudwatch put-metric-alarm \
+  --alarm-name HighContainerCPU \
+  --namespace "ECS/ContainerInsights" \
+  --metric-name CPUUtilized \
+  --dimensions Name=ClusterName,Value=webapp-cluster \
+  --statistic Average \
+  --period 300 \
+  --evaluation-periods 1 \
+  --threshold 80 \
+  --comparison-operator GreaterThanThreshold \
+  --alarm-actions arn:aws:sns:us-east-1:123456789012:NotifyOps

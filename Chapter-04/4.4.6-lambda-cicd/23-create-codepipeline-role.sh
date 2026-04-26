@@ -1,0 +1,1 @@
+aws iam create-role   --role-name CodePipelineServiceRole   --assume-role-policy-document file://codepipeline-trust-policy.json

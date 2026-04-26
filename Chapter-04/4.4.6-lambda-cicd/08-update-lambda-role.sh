@@ -1,0 +1,1 @@
+aws iam update-assume-role-policy   --role-name LambdaExecutionRole   --policy-document file://lambda-trust-policy.json

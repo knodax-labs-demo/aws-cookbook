@@ -1,0 +1,1 @@
+aws secretsmanager rotate-secret   --secret-id $SECRET_NAME   --rotation-lambda-arn arn:aws:lambda:$REGION:<ACCOUNT_ID>:function:RotateSecretFunction   --rotation-rules AutomaticallyAfterDays=30   --region $REGION

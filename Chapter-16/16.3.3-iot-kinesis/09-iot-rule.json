@@ -1,0 +1,13 @@
+{
+  "sql": "SELECT * FROM 'factory/sensors/+'",
+  "ruleDisabled": false,
+  "actions": [
+    {
+      "kinesis": {
+        "streamName": "sensor-data-stream",
+        "partitionKey": "${topic()}",
+        "roleArn": "REPLACE_WITH_ROLE_ARN"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+export ETAG=$(cat output.json | jq -r '.ETag')

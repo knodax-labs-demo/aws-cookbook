@@ -1,0 +1,12 @@
+aws cloudwatch put-metric-alarm \
+  --alarm-name HighCPUUtilization \
+  --metric-name CPUUtilization \
+  --namespace AWS/EC2 \
+  --statistic Average \
+  --period 60 \
+  --threshold 80 \
+  --comparison-operator GreaterThanThreshold \
+  --dimensions Name=InstanceId,Value=$INSTANCE_ID \
+  --evaluation-periods 2 \
+  --alarm-actions $TOPIC_ARN \
+  --region $REGION

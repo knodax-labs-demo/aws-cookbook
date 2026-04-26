@@ -1,0 +1,9 @@
+#!/bin/bash
+
+REGION=us-east-1
+VPC_CIDR=10.0.0.0/16
+
+PUBLIC_SUBNET_CIDR=10.0.1.0/24
+PRIVATE_SUBNET_CIDR=10.0.2.0/24
+
+AZ=us-east-1a

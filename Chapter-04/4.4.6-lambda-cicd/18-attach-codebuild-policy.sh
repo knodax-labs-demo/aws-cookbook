@@ -1,0 +1,1 @@
+aws iam attach-role-policy   --role-name CodeBuildServiceRole   --policy-arn arn:aws:iam::aws:policy/AWSCodeBuildDeveloperAccess

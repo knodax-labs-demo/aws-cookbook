@@ -1,0 +1,14 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "firehose:PutRecord",
+        "firehose:PutRecordBatch",
+        "firehose:DescribeDeliveryStream"
+      ],
+      "Resource": "arn:aws:firehose:$AWS_REGION:$ACCOUNT_ID:deliverystream/$DELIVERY_STREAM"
+    }
+  ]
+}

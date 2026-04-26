@@ -1,0 +1,1 @@
+aws deploy get-deployment --deployment-id <deployment-id>

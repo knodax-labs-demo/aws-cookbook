@@ -1,0 +1,5 @@
+{
+  "Arn": "$LAMBDA_ARN",
+  "RoleArn": "$SCHEDULER_ROLE_ARN",
+  "Input": "{\"source\":\"eventbridge-scheduler\",\"message\":\"Hourly scheduled invocation\"}"
+}

@@ -1,0 +1,1 @@
+aws s3 sync $SITE_DIR s3://$BUCKET_NAME

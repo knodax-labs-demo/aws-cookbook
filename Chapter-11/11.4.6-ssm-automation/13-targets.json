@@ -1,0 +1,8 @@
+[
+  {
+    "Id": "1",
+    "Arn": "arn:aws:ssm:$REGION:$ACCOUNT_ID:automation-definition/$RUNBOOK_NAME:\$DEFAULT",
+    "RoleArn": "$AUTOMATION_ROLE_ARN",
+    "Input": "{\"InstanceId\":[\"$INSTANCE_ID\"],\"AutomationAssumeRole\":[\"$AUTOMATION_ROLE_ARN\"]}"
+  }
+]

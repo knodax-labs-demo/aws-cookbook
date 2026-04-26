@@ -1,0 +1,22 @@
+{
+  "name": "Approval",
+  "actions": [
+    {
+      "name": "ManualApprovalBeforeProd",
+      "actionTypeId": {
+        "category": "Approval",
+        "owner": "AWS",
+        "provider": "Manual",
+        "version": "1"
+      },
+      "runOrder": 1,
+      "configuration": {
+        "CustomData": "Review build details. Approve to deploy to PROD.",
+        "NotificationArn": "arn:aws:sns:us-east-1:123456789012:PipelineNotifications"
+      },
+      "outputArtifacts": [],
+      "inputArtifacts": [],
+      "region": "us-east-1"
+    }
+  ]
+}

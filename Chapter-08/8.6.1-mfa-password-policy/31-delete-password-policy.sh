@@ -1,0 +1,1 @@
+aws iam delete-account-password-policy

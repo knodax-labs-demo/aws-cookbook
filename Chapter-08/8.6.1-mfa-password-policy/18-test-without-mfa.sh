@@ -1,0 +1,1 @@
+aws ec2 describe-instances --profile $DEVUSER_PROFILE --region $REGION

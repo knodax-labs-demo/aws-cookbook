@@ -1,0 +1,1 @@
+aws rds create-db-instance   --db-instance-identifier $DB_INSTANCE_ID   --db-cluster-identifier $DB_CLUSTER_ID   --engine aurora-mysql   --db-instance-class db.serverless   --publicly-accessible   --region $REGION

@@ -1,0 +1,1 @@
+aws codebuild create-project   --name LambdaBuildProject   --source type=CODEPIPELINE,buildspec=buildspec.yml   --artifacts type=CODEPIPELINE   --environment type=LINUX_CONTAINER,computeType=BUILD_GENERAL1_SMALL,image=aws/codebuild/standard:7.0   --service-role arn:aws:iam::<account-id>:role/CodeBuildServiceRole

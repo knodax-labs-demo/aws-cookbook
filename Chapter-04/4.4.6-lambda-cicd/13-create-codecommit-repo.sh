@@ -1,0 +1,1 @@
+aws codecommit create-repository   --repository-name lambda-api-repo

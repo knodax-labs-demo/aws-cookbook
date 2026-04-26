@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - zip -r lambda_app.zip app.py template.yml
+
+artifacts:
+  files:
+    - lambda_app.zip
+    - template.yml

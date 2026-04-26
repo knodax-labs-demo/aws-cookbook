@@ -1,0 +1,45 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+    commands:
+      - echo "Installing build dependencies..."
+      - python -m pip install --upgrade pip
+      - mkdir -p package
+      - |
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt -t package/
+        else
+          echo "No requirements.txt found, skipping dependency installation."
+        fi
+      - pip install pytest
+
+  pre_build:
+    commands:
+      - echo "Running unit tests..."
+      - |
+        if [ -d tests ]; then
+          pytest tests/
+        else
+          echo "No tests directory found, skipping tests."
+        fi
+
+  build:
+    commands:
+      - echo "Packaging Lambda deployment artifact..."
+      - mkdir -p build
+      - cp app.py build/
+      - |
+        if [ -d package ]; then
+          cp -r package/* build/ 2>/dev/null || true
+        fi
+      - cd build
+      - zip -r9 ../lambda_function.zip .
+      - cd ..
+      - echo "Lambda package created successfully."
+
+artifacts:
+  files:
+    - lambda_function.zip

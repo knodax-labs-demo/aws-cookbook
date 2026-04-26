@@ -1,0 +1,28 @@
+FROM python:3.11-slim
+
+RUN apt-get update && apt-get install -y apache2 apache2-dev gcc && \
+    pip install --no-cache-dir Flask==3.0.3 mod_wsgi==5.0.0 && \
+    mod_wsgi-express install-module > /etc/apache2/mods-available/wsgi.load && \
+    a2enmod wsgi && \
+    mkdir -p /var/www/app
+
+COPY app.py /var/www/app/app.py
+COPY wsgi.py /var/www/app/wsgi.py
+
+RUN printf '%s\n' \
+    '<VirtualHost *:80>' \
+    '    ServerName localhost' \
+    '    WSGIDaemonProcess flaskapp python-home=/usr/local python-path=/var/www/app' \
+    '    WSGIProcessGroup flaskapp' \
+    '    WSGIScriptAlias / /var/www/app/wsgi.py' \
+    '    <Directory /var/www/app>' \
+    '        Require all granted' \
+    '    </Directory>' \
+    '    ErrorLog /dev/stderr' \
+    '    CustomLog /dev/stdout combined' \
+    '</VirtualHost>' \
+    > /etc/apache2/sites-available/000-default.conf
+
+EXPOSE 80
+
+CMD ["apachectl", "-D", "FOREGROUND"]

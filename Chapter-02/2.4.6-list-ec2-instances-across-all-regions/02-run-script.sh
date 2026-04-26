@@ -1,0 +1,1 @@
+python list_ec2_instances_all_regions.py

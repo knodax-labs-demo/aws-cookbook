@@ -1,0 +1,1 @@
+jq '.Enabled = false' dist-config-latest.json > dist-config-disabled.json

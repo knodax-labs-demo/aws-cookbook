@@ -1,0 +1,26 @@
+{
+  "schemaVersion": "0.3",
+  "description": "Restart an EC2 instance automatically",
+  "assumeRole": "{{ AutomationAssumeRole }}",
+  "parameters": {
+    "InstanceId": {
+      "type": "String",
+      "description": "EC2 instance ID"
+    },
+    "AutomationAssumeRole": {
+      "type": "String",
+      "description": "IAM role ARN for automation"
+    }
+  },
+  "mainSteps": [
+    {
+      "name": "RestartInstance",
+      "action": "aws:executeAwsApi",
+      "inputs": {
+        "Service": "EC2",
+        "Api": "RebootInstances",
+        "InstanceIds": ["{{ InstanceId }}"]
+      }
+    }
+  ]
+}

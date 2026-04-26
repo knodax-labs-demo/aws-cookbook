@@ -1,0 +1,1 @@
+aws lambda create-function   --function-name RemediateS3Encryption   --runtime python3.11   --role arn:aws:iam::<ACCOUNT_ID>:role/S3EncryptionRemediatorRole   --handler remediate_s3_encryption.lambda_handler   --zip-file fileb://function.zip   --environment "Variables={KMS_KEY_ARN=,SNS_TOPIC_ARN=,EXCLUDE_PREFIXES=aws-,REQUIRE_BUCKET_KEY=true}"

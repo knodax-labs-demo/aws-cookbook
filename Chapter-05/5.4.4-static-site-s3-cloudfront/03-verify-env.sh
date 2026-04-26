@@ -1,0 +1,4 @@
+echo $AWS_REGION
+echo $ACCOUNT_ID
+echo $BUCKET_NAME
+echo $SITE_DIR

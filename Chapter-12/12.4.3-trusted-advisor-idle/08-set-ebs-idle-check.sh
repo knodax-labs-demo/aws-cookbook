@@ -1,0 +1,1 @@
+export CHECK_EBS_IDLE=Ti39halfu8

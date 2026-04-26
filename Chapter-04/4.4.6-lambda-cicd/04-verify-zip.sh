@@ -1,0 +1,1 @@
+ls -l bootstrap_minimal.zip

@@ -1,0 +1,1 @@
+aws iam create-role   --role-name CodeBuildServiceRole   --assume-role-policy-document file://codebuild-trust-policy.json

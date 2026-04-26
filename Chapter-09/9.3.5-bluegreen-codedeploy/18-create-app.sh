@@ -1,0 +1,1 @@
+aws deploy create-application --application-name WebAppCodeDeploy --compute-platform ECS

@@ -1,0 +1,1 @@
+aws fsx describe-file-systems

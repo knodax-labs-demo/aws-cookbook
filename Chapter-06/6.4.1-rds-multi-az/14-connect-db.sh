@@ -1,0 +1,1 @@
+mysql -h $DB_ENDPOINT -u $DB_USER -p

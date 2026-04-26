@@ -1,0 +1,1 @@
+aws lambda add-permission   --function-name RemediateS3Encryption   --statement-id evtrule   --action "lambda:InvokeFunction"   --principal events.amazonaws.com   --source-arn arn:aws:events:us-east-1:<ACCOUNT_ID>:rule/S3EncryptionGuardrail

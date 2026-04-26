@@ -1,0 +1,1 @@
+aws s3 mb s3://lambda-pipeline-artifacts-<acct>-<region>

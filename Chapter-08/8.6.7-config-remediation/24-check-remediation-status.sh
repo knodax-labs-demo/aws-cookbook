@@ -1,0 +1,1 @@
+aws configservice describe-remediation-execution-status   --config-rule-name s3-bucket-public-read-prohibited   --resource-keys resourceType=AWS::S3::Bucket,resourceId=$TEST_BUCKET_NAME   --region $REGION

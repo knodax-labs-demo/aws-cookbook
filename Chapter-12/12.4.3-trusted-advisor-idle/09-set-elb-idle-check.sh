@@ -1,0 +1,1 @@
+export CHECK_ELB_IDLE=c1z7kmr03n

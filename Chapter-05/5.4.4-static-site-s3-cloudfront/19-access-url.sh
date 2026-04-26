@@ -1,0 +1,1 @@
+echo https://$CLOUDFRONT_DOMAIN

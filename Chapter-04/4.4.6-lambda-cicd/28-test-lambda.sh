@@ -1,0 +1,1 @@
+aws lambda invoke --function-name MyApiFunction out.json && cat out.json

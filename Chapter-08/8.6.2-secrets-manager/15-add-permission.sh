@@ -1,0 +1,1 @@
+aws lambda add-permission   --function-name RotateSecretFunction   --statement-id SecretsManagerInvokePermission   --action lambda:InvokeFunction   --principal secretsmanager.amazonaws.com   --source-account 383246081810   --source-arn $SECRET_ARN   --region $REGION

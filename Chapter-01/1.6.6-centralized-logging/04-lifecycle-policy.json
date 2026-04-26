@@ -1,0 +1,18 @@
+{
+  "Rules": [
+    {
+      "ID": "LogLifecyclePolicy",
+      "Status": "Enabled",
+      "Filter": { "Prefix": "" },
+      "Transitions": [
+        {
+          "Days": 90,
+          "StorageClass": "GLACIER"
+        }
+      ],
+      "Expiration": {
+        "Days": 365
+      }
+    }
+  ]
+}

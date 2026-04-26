@@ -1,0 +1,1 @@
+aws lambda create-function   --function-name MyApiFunction   --runtime python3.11   --role arn:aws:iam::<acct-id>:role/LambdaExecutionRole   --handler app.handler   --zip-file fileb://bootstrap_minimal.zip

@@ -1,0 +1,1 @@
+cat output.json | jq '.DistributionConfig' > dist-config.json

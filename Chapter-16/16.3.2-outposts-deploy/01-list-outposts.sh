@@ -1,0 +1,1 @@
+aws outposts list-outposts

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "0.3",
+  "description": "Attempt tiered recovery of an EC2 instance",
+  "parameters": {
+    "InstanceId": {
+      "type": "String",
+      "description": "Target EC2 instance"
+    },
+    "ServiceName": {
+      "type": "String",
+      "default": "myapp",
+      "description": "Linux service to restart"
+    },
+    "IsInASG": {
+      "type": "String",
+      "allowedValues": ["true", "false"],
+      "default": "true"
+    }
+  },
+  "mainSteps": [
+    {
+      "name": "RestartService",
+      "action": "aws:runCommand",
+      "inputs": {
+        "DocumentName": "AWS-RunShellScript",
+        "InstanceIds": ["{{InstanceId}}"],
+        "Parameters": {
+          "commands": [
+            "set -e",
+            "sudo systemctl restart {{ServiceName}} || true",
+            "sleep 10",
+            "sudo systemctl is-active {{ServiceName}} || exit 1"
+          ]
+        }
+      },
+      "onFailure": "step:RebootInstance",
+      "nextStep": "EndSuccess"
+    }
+  ]
+}

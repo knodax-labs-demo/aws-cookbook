@@ -1,0 +1,12 @@
+aws cloudwatch put-metric-alarm \
+  --alarm-name "EC2-StatusCheckFailed-i-xxxx" \
+  --metric-name StatusCheckFailed \
+  --namespace AWS/EC2 \
+  --statistic Maximum \
+  --period 60 \
+  --threshold 1 \
+  --comparison-operator GreaterThanOrEqualToThreshold \
+  --evaluation-periods 2 \
+  --datapoints-to-alarm 2 \
+  --treat-missing-data missing \
+  --dimensions Name=InstanceId,Value=i-xxxx

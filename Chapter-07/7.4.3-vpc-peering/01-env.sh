@@ -1,0 +1,11 @@
+#!/bin/bash
+
+REGION=us-east-1
+
+# CIDR blocks
+VPC1_CIDR=10.1.0.0/16
+VPC2_CIDR=10.2.0.0/16
+
+# Subnets
+VPC1_SUBNET_CIDR=10.1.1.0/24
+VPC2_SUBNET_CIDR=10.2.1.0/24

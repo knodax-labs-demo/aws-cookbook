@@ -1,0 +1,11 @@
+Resources:
+  LambdaAppFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: LambdaApp
+      Handler: app.handler
+      Runtime: python3.12
+      Role: arn:aws:iam::ACCOUNT_ID:role/LambdaExecutionRole
+      Code:
+        S3Bucket: ARTIFACT_BUCKET
+        S3Key: lambda_app.zip

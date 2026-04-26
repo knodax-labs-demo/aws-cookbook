@@ -1,0 +1,3 @@
+aws ec2 authorize-security-group-ingress \
+  --group-id <sg-id> \
+  --protocol tcp --port 80 --cidr 0.0.0.0/0
