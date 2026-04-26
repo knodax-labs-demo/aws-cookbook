@@ -1,0 +1,6 @@
+[
+  {
+    "SubscriptionType": "SNS",
+    "Address": "$TOPIC_ARN"
+  }
+]

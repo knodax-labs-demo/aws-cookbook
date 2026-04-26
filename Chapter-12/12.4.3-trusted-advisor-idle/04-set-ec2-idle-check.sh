@@ -1,0 +1,1 @@
+export CHECK_EC2_IDLE=eW7HH0l7J9
