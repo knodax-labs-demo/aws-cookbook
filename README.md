@@ -195,7 +195,8 @@ Learn faster with structured explanations, real-world recipes, and hands-on labs
 </p>
 
 <p>
-👉 <a href="https://www.amazon.com/dp/B0GXGRC6Y3">Get the book on Amazon</a>
+👉 <a href="https://www.amazon.com/dp/B0GXGRC6Y3" target="_blank" rel="noopener noreferrer">
+  Get the book on Amazon</a>
 </p>
 
 <hr />
