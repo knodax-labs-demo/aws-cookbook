@@ -4,7 +4,7 @@
   <strong>⭐ If this repository helps you, please give it a star! ⭐</strong>
 </p>
 
-<h1 align="center">AWS Cookbook — Hands-On Recipes for Real-World Cloud Solutions</h1>
+<h1 align="center">AWS Cookbook: Hands-On Recipes for Real-World Cloud Solutions</h1>
 
 <p align="center">
   Build, deploy, secure, and scale applications on AWS using practical, production-ready recipes.
