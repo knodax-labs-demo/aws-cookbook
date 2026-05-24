@@ -1,4 +1,4 @@
-<img width="1280" height="640" alt="AWS Cookbook — KnoDAX" src="https://github.com/user-attachments/assets/be2ebf91-c293-4efd-b4f8-bfb106b33e90" />
+<img width="1280" height="640" alt="aws-cookbook-github" src="https://github.com/user-attachments/assets/afb24765-5e52-4f65-b294-a697014493b9" />
 
 <p align="center">
   <strong>⭐ If this repository helps you, please give it a star! ⭐</strong>
