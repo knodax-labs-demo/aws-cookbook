@@ -240,34 +240,11 @@ All updates are managed internally by the KnoDAX team to keep this repository cl
 
 <hr />
 
-<h2>🙌 Support This Project</h2>
-
-<p>If this repository helped you:</p>
-
-<ul>
-  <li>⭐ Star this repository</li>
-  <li>📘 Support the book</li>
-  <li>🚀 Share it with other AWS learners</li>
-</ul>
-
-<hr />
-
-<h2>🏷️ Topics</h2>
-
 <p>
-AWS, Cloud Computing, DevOps, Lambda, EC2, S3, RDS, VPC, IAM, CloudWatch,
-ECS, EKS, Docker, Kubernetes, SageMaker, Rekognition, Comprehend, Polly,
-AWS Cookbook, Cloud Engineering
-</p>
+<h2>Enjoying the AWS Cookbook: Hands-On Recipes for Building Real-World Cloud Systems Book?</h2>
 
-<hr />
+🔗 [Leave a Review on Amazon](https://www.amazon.com/review/create-review/?asin=B0GXJX2WL3)
 
-<h2>🧑‍💻 Maintained by KnoDAX</h2>
-
+Your feedback helps other readers discover the book and supports future KnoDAX publications.
+Thank you for your support and for being part of the KnoDAX learning community.
 <p>
-Professional AWS training, certification guides, hands-on labs, and real-world cloud learning.
-</p>
-
-<p>
-👉 <a href="https://knodax.com">https://knodax.com</a>
-</p>
